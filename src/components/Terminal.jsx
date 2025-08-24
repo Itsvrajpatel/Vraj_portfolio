@@ -36,16 +36,17 @@ export default function Terminal() {
       </div>
     ),
     about: () => (
-      <p>I am a full-stack developer passionate about building web applications...</p>
+      <p>I am a Full Stack Developer skilled in React, Node.js, MySQL, and MongoDB. Passionate about building user-friendly, scalable web applications with clean and efficient code. Always eager to learn, adapt, and contribute to innovative projects.</p>
     ),
     skills: () => (
       <div className="space-y-2">
         <p>Technical Skills:</p>
         <ul className="list-disc pl-5">
-          <li>Frontend: React, Three.js, TailwindCSS</li>
+          <li>Frontend: React, Next.js, Three.js, TailwindCSS</li>
           <li>Backend: Node.js, Express</li>
-          <li>Languages: JavaScript, Python</li>
-          <li>Tools: Git, VS Code</li>
+          <li>Languages: HTML, CSS, JavaScript, C++, SQL</li>
+          <li>Tools: Git, VS Code, MySQL Workbench, Supabase, Power BI, Canva, Figma</li>
+          <li>AI Tools: Cursor, Claude, Firebase Studio</li>
         </ul>
       </div>
     ),
@@ -53,17 +54,17 @@ export default function Terminal() {
       <div className="space-y-2">
         <p>Recent Projects:</p>
         <ul className="list-disc pl-5">
-          <li>3D Portfolio - React, Three.js</li>
-          <li>Project X - MERN Stack</li>
-          <li>Project Y - Next.js, TypeScript</li>
+          <li>Linkroo - Next.js, TypeScript, Tailwind CSS, Supabase, Radix, Sonner </li>
+          <li>Lexroo - Next.js, Tailwind CSS, Shadcn, Recharts, Lucide React, React Hooks, Typescript</li>
+          <li>Urban Roost -HTML, Tailwind CSS, JavaScript, React.js, Spring Framework, Hibernate, MySQL</li>
         </ul>
       </div>
     ),
     contact: () => (
       <div className="space-y-2">
-        <p>Email: your@email.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourusername</p>
+        <p>Email: vrajp9013@gmail.com</p>
+        <p>GitHub: github.com/Itsvrajpatel</p>
+        <p>LinkedIn: linkedin.com/in/vraj-patel-web-developer/</p>
       </div>
     ),
   };
