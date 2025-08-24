@@ -18,7 +18,7 @@ const StatisticsSection = () => {
             </div>
             <div style={{ textAlign: 'center', margin: '10px', minWidth: '200px', position: 'relative' }} className="statistic-item">
               <h3 style={{ fontSize: '24px', marginBottom: '10px' }} className="statistic-title">CGPA</h3>
-              <p style={{ fontSize: '32px', fontWeight: 'bold' }} className="statistic-number">7.67</p> {/* Example CGPA */}
+              <p style={{ fontSize: '32px', fontWeight: 'bold' }} className="statistic-number">7.76</p> {/* Example CGPA */}
               <div style={{ position: 'absolute', bottom: '-10px', left: '50%', transform: 'translateX(-50%)', width: '80%', borderBottom: '1px solid #ffffff80' }}></div>
             </div>
             <div style={{ textAlign: 'center', margin: '10px', minWidth: '200px', position: 'relative' }} className="statistic-item">
