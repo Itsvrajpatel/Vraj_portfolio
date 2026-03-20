@@ -117,7 +117,7 @@ export default function Terminal() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-20 right-5 w-[600px] h-[400px] bg-black rounded-lg overflow-hidden shadow-lg border border-green-500 z-50"
+            className="fixed bottom-20 right-5 w-[calc(100vw-40px)] sm:w-[600px] h-[400px] max-h-[80vh] bg-black rounded-lg overflow-hidden shadow-lg border border-green-500 z-50"
           >
             {/* Terminal Header */}
             <div className="bg-green-500 p-2 flex justify-between items-center">
