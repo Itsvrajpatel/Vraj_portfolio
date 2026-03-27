@@ -89,7 +89,7 @@
 
 //         </form>
 
-        
+
 
 //       </motion.div>
 //       <motion.div variants={slideIn('right', "tween", 0.2, 1)}
@@ -131,15 +131,16 @@ const Contact = () => {
 
     try {
       // Make sure these IDs match exactly with your EmailJS dashboard
-      const serviceId = 'service_v0l7umk';
+      const serviceId = 'service_zx5mdjl';
       const templateId = 'template_sz3cix8';
       const publicKey = 'gDZOR0P4WKJ6GQWuw';
 
       const templateParams = {
-        user_name: form.name,         // Make sure these match your EmailJS template variables
-        user_email: form.email,
-        message: form.message,
+        from_name: form.name,
         to_name: 'Vraj',
+        from_email: form.email,
+        to_email: 'vrajp9013@gmail.com',
+        message: form.message,
       };
 
       const result = await emailjs.send(
@@ -152,7 +153,7 @@ const Contact = () => {
       console.log('Success:', result);
       setLoading(false);
       alert('Thank you. I will get back to you as soon as possible.');
-      
+
       setForm({
         name: '',
         email: '',

@@ -20,12 +20,19 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import nextjs from "./tech/nextjs.svg";
+import wordpress from "./tech/wordpress.svg";
+import webflow from "./tech/webflow.svg";
+import canva from "./tech/canva.svg";
+import supabase from "./tech/supabase.svg";
+import aspnet from "./tech/aspnet.svg";
 
 // import meta from "./company/meta.png";
 // import shopify from "./company/shopify.png";
 import sam from "./company/sam.png";
 import aug from "./company/aug.jpeg";
 import oas from "./company/oas.jpeg"
+import DB from "./company/DB.png";
 
 // import joke from "./joke.jpg";
 import GC from "./GC.png";
@@ -54,12 +61,19 @@ export {
   tailwind,
   typescript,
   threejs,
+  nextjs,
+  wordpress,
+  webflow,
+  canva,
+  supabase,
+  aspnet,
   //meta,
   //shopify,
   sam,
   aug,
+  DB,
   oas,
   GC,
   sambhu,
- Gamezy,
+  Gamezy,
 };

@@ -5,29 +5,37 @@ import { github } from "../assets"
 import { SectionWrapper } from "../hoc"
 import { projects } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
+import { ExternalLink } from "lucide-react"
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_link }) => {
   return(
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="w-full h-full">
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full h-[550px]"
+        className="bg-tertiary p-5 rounded-2xl w-full h-full flex flex-col justify-between"
       >
         <div className="relative w-full h-[230px]">
           <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl"/>
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute inset-0 flex justify-end gap-2 m-3 card-img_hover">
+            {live_link && (
+              <div onClick={() => window.open(live_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                title="Live Demo"
+              >
+                <ExternalLink size={20} color="#fff" />
+              </div>
+            )}
             <div onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              title="Source Code"
             >
               <img src={github} alt="github" className="w-1/2 h-1/2 object-contain" />
-
             </div>
-
           </div>
 
         </div>
@@ -58,7 +66,7 @@ const Works = () => {
     <div className="w-full flex">
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-3 text-secondary text-[17px] w-full text-justify leading-[30px]"
       >
         Following projects showcases my skills and experience through
         real-world examples of my work. Each project is briefly described with
@@ -70,7 +78,7 @@ const Works = () => {
       
     </div>
 
-    <div className="mt-20 flex flex-wrap gap-7">
+    <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 w-full">
       {projects.map((project, index) => (
         <ProjectCard
         key={`prpject-${index}`}
@@ -85,5 +93,3 @@ const Works = () => {
 }
 
 export default SectionWrapper(Works, "");
-
-

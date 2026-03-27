@@ -5,6 +5,7 @@ import About from './About';
 import Tech from './Tech';
 import Experience from './Experience';
 import Works from './Works';
+import Github from './Github';
 import CompanySlider from './CompanySlider';
 // import resumePdf from '../assets/company/Vraj Resume.pdf';
 //import Feedbacks from './Feedbacks';
@@ -19,6 +20,7 @@ export {
   // resumePdf,
   Experience,
   Works,
+  Github,
   CompanySlider,
   // Feedbacks,
   Contact,
