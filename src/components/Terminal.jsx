@@ -25,13 +25,13 @@ export default function Terminal() {
       <div className="space-y-2">
         <p>Available commands:</p>
         <ul className="list-disc pl-5">
-          <li><span className="text-green-400">help</span> - Show available commands</li>
-          <li><span className="text-green-400">about</span> - About me</li>
-          <li><span className="text-green-400">skills</span> - My technical skills</li>
-          <li><span className="text-green-400">projects</span> - View my projects</li>
-          <li><span className="text-green-400">contact</span> - Contact information</li>
-          <li><span className="text-green-400">clear</span> - Clear terminal</li>
-          <li><span className="text-green-400">exit</span> - Close terminal</li>
+          <li><span className="text-[#915eff]">help</span> - Show available commands</li>
+          <li><span className="text-[#915eff]">about</span> - About me</li>
+          <li><span className="text-[#915eff]">skills</span> - My technical skills</li>
+          <li><span className="text-[#915eff]">projects</span> - View my projects</li>
+          <li><span className="text-[#915eff]">contact</span> - Contact information</li>
+          <li><span className="text-[#915eff]">clear</span> - Clear terminal</li>
+          <li><span className="text-[#915eff]">exit</span> - Close terminal</li>
         </ul>
       </div>
     ),
@@ -71,12 +71,12 @@ export default function Terminal() {
 
   const handleCommand = (cmd) => {
     const command = cmd.toLowerCase().trim();
-    
+
     if (command === "clear") {
       setHistory([]);
       return null;
     }
-    
+
     if (command === "exit") {
       setIsOpen(false);
       return null;
@@ -103,9 +103,9 @@ export default function Terminal() {
       {/* Terminal Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-5 right-5 z-50 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+        className="fixed bottom-5 right-5 z-50 bg-[#915eff] p-3 rounded-full shadow-lg hover:bg-[#804dee] transition-colors"
       >
-        <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3" />
         </svg>
       </button>
@@ -117,14 +117,14 @@ export default function Terminal() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-20 right-5 w-[calc(100vw-40px)] sm:w-[600px] h-[400px] max-h-[80vh] bg-black rounded-lg overflow-hidden shadow-lg border border-green-500 z-50"
+            className="fixed bottom-20 right-5 w-[calc(100vw-40px)] sm:w-[600px] h-[400px] max-h-[80vh] bg-black rounded-lg overflow-hidden shadow-lg border border-[#915eff] z-50"
           >
             {/* Terminal Header */}
-            <div className="bg-green-500 p-2 flex justify-between items-center">
-              <span className="text-black font-mono">Terminal</span>
+            <div className="bg-[#915eff] p-2 flex justify-between items-center">
+              <span className="text-white font-mono">Terminal</span>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-black hover:text-gray-800"
+                className="text-white hover:text-gray-200"
               >
                 ×
               </button>
@@ -133,14 +133,14 @@ export default function Terminal() {
             {/* Terminal Content */}
             <div
               ref={terminalRef}
-              className="p-4 h-[calc(100%-80px)] overflow-y-auto font-mono text-green-400"
+              className="p-4 h-[calc(100%-80px)] overflow-y-auto font-mono text-[#915eff]"
             >
               <p className="mb-4">Welcome! Type 'help' for available commands.</p>
-              
+
               {history.map((item, index) => (
                 <div key={index} className="mb-4">
                   <div className="flex items-center">
-                    <span className="text-green-500 mr-2">$</span>
+                    <span className="text-[#915eff] mr-2">$</span>
                     <span>{item.command}</span>
                   </div>
                   <div className="ml-4 mt-1">{item.output}</div>
@@ -149,15 +149,15 @@ export default function Terminal() {
             </div>
 
             {/* Terminal Input */}
-            <form onSubmit={handleSubmit} className="absolute bottom-0 w-full p-2 border-t border-green-500">
+            <form onSubmit={handleSubmit} className="absolute bottom-0 w-full p-2 border-t border-[#915eff]">
               <div className="flex items-center">
-                <span className="text-green-500 mr-2">$</span>
+                <span className="text-[#915eff] mr-2">$</span>
                 <input
                   ref={inputRef}
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  className="flex-1 bg-transparent text-green-400 outline-none font-mono"
+                  className="flex-1 bg-transparent text-[#915eff] outline-none font-mono"
                   placeholder="Type a command..."
                 />
               </div>
